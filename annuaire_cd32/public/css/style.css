@@ -1,0 +1,22 @@
+/* ON CALE NOTRE PAGE À ZERO */
+html body {
+	margin: 0px;
+	padding:0px;
+}
+
+/* NOTRE DIV AYANT L'ID MAP DOIT PRENDRE LA TOTALITÉ DE L'ÉCRAN */
+#map {
+	width: 100%;
+	height: 60vh;
+}
+
+/* CENTRER LE BOUTON AU CENTRE DE LA NAVBAR ET DE LA PAGE */
+#validation  {
+	display: block;
+	margin: auto;
+}
+
+/* COPYRIGHT */
+#copyright {
+	font-size: 0.5em;
+}

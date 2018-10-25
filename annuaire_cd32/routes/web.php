@@ -12,11 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('authentification');
+    return view('welcome');
 });
-
-Route::get('/carte', function () {
-    return view('carte');
-});
-
-Route::get('/apiProducteur', 'apiProducteur@getProducteurs');
