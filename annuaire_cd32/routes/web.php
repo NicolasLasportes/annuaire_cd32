@@ -20,3 +20,7 @@ Route::get('/carte', function () {
 });
 
 Route::get('/apiProducteur', 'apiProducteur@getProducteurs');
+
+Route::get('/carteUtilisateur', function () {
+    return view('carteUtilisateur');
+});
