@@ -14,10 +14,13 @@ class Commentaire extends Migration
     public function up()
     {
         Schema::create('commentaire', function (Blueprint $table) {
-            $table->increments('id_commentaire');
+            $table->increments('id');
             $table->string('texte_commentaire');
-            $table->integer('id_chef');
-            $table->integer('id_producteur');
+            $table->unsignedInteger('id_chef');
+            $table->unsignedInteger('id_producteur');
+
+            $table->foreign('id_producteur')->references('id')->on('producteur')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_chef')->references('id')->on('chef')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });      
     }

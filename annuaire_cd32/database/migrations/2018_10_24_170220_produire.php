@@ -14,9 +14,12 @@ class Produire extends Migration
    	public function up()
     {
         Schema::create('produire', function (Blueprint $table) {
-            $table->integer('id_produire');
-            $table->integer('id_produit');
-            $table->integer('id_producteur');
+            $table->integer('id');
+            $table->unsignedInteger('id_produit');
+            $table->unsignedInteger('id_producteur');
+
+            $table->foreign('id_produit')->references('id')->on('produit')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_producteur')->references('id')->on('producteur')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });      
     }

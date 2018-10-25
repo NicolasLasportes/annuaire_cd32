@@ -14,7 +14,7 @@ class Siqo extends Migration
    public function up()
     {
         Schema::create('siqo', function (Blueprint $table) {
-            $table->increments('id_siqo');
+            $table->increments('id');
             $table->string('nom_siqo');
             $table->timestamps();
         });      

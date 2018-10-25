@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 php artisan iseed cms_apicustom
 php artisan iseed cms_apikey
 php artisan iseed cms_dashboard
@@ -19,3 +18,12 @@ php artisan iseed cms_statistic_components
 php artisan iseed cms_users
 php artisan iseed migrations
 php artisan iseed siqo
+php artisan iseed marque
+php artisan iseed preferer
+php artisan iseed produit
+php artisan iseed produire
+php artisan iseed producteur
+php artisan iseed chef
+php artisan iseed categorie
+php artisan iseed commentaire
+php artisan iseed sous_categorie

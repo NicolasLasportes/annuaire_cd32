@@ -14,9 +14,12 @@ class Preferer extends Migration
    	public function up()
     {
         Schema::create('preferer', function (Blueprint $table) {
-            $table->increments('id_preferer');
-            $table->integer('id_producteur');
-            $table->integer('id_chef');
+            $table->increments('id');
+            $table->unsignedInteger('id_producteur');
+            $table->unsignedInteger('id_chef');
+
+            $table->foreign('id_producteur')->references('id')->on('producteur')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_chef')->references('id')->on('chef')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });      
     }

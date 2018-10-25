@@ -14,8 +14,11 @@ class SousCategorie extends Migration
    	public function up()
     {
         Schema::create('sous_categorie', function (Blueprint $table) {
-            $table->increments('id_sous_categorie');
+            $table->increments('id');
             $table->string('nom_sous_categorie');
+            $table->unsignedInteger('id_categorie');
+
+            $table->foreign('id_categorie')->references('id')->on('categorie')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });      
     }

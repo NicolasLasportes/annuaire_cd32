@@ -14,7 +14,7 @@ class Chef extends Migration
     public function up()
     {
         Schema::create('chef', function (Blueprint $table) {
-            $table->increments('id_chef');
+            $table->increments('id');
             $table->string('nom_chef');
             $table->string('prenom_chef');
             $table->string('identifiant_chef');

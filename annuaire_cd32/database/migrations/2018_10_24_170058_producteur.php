@@ -14,7 +14,7 @@ class Producteur extends Migration
     public function up()
     {
         Schema::create('producteur', function (Blueprint $table) {
-            $table->increments('id_producteur');
+            $table->increments('id');
             $table->string('nom_entreprise_producteur');
             $table->string('lieu_dit_producteur')->nullable();
             $table->string('numero_producteur')->nullable();

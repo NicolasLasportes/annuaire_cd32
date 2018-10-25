@@ -4,18 +4,18 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Marque extends Migration
+class Categorie extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+   public function up()
     {
-        Schema::create('marque', function (Blueprint $table) {
-            $table->increments('id_marque');
-            $table->string('nom_marque');
+        Schema::create('categorie', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nom_categorie');
             $table->timestamps();
         });      
     }
@@ -27,6 +27,6 @@ class Marque extends Migration
      */
     public function down()
     {
-        Schema::drop('marque');    
+         Schema::drop('categorie');
     }
 }

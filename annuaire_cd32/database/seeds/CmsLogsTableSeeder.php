@@ -89,6 +89,18 @@ class CmsLogsTableSeeder extends Seeder
                 'created_at' => '2018-10-25 11:47:13',
                 'updated_at' => NULL,
             ),
+            6 => 
+            array (
+                'id' => 7,
+                'ipaddress' => '127.0.0.1',
+            'useragent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0',
+                'url' => 'http://localhost/annuaire_cd32/annuaire_cd32/public/admin/login',
+                'description' => 'admin@crudbooster.com login with IP Address 127.0.0.1',
+                'details' => '',
+                'id_cms_users' => 1,
+                'created_at' => '2018-10-25 13:01:11',
+                'updated_at' => NULL,
+            ),
         ));
         
         
