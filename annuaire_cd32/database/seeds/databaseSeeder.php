@@ -29,5 +29,5 @@ class DatabaseSeeder extends Seeder
         $this->call(MigrationsTableSeeder::class);
         $this->call(SiqoTableSeeder::class);
     }
-}
+
 }
