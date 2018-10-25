@@ -2,6 +2,7 @@
 var map = L.map('map').setView([43.64638, 0.586709], 13);
 //Differentes positions des producteurs sur la carte.
 var producteur = [];
+var tabProducteur = [];
 // Structure de la carte.
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -25,30 +26,33 @@ $.ajax({
 //fonction pour recuperer les données JSON. 
 }).done(function(tousLesProducteurs)
 {
-	alert("coucou");
 	console.log(tousLesProducteurs);
+	tabProducteur = tousLesProducteurs;
 	// Désactivation du boutton de recherche sur la page carte.
-	$("#rechercher").click(function()
-	{
-		for(i=0; i < tousLesProducteurs.length; i++)
-		{
-			var trouver=$("#input").val().toUpperCase();
-			if (trouver==tousLesProducteurs[i].label_producteur.toUpperCase()) 
-			{
-				alert('la comparaison est trouvé');	
-			}
-		producteur = tousLesProducteurs;
-		}	
-		return false;
-	})
 })
 
-	// function genererMarqueur()
-	// {
-	// 	producteur;
-	// }
+$("#rechercher").click(function()
+{
+	for(i=0; i < tabProducteur.length; i++)
+	{
+		var trouver=$("#input").val().toUpperCase();
+		if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+			
+		}
+	}	
+	producteur = tabProducteur;
+	return false;
+})
 
-console.log(producteur);
 
-$("#table").append('<tr><td class="id">'+i+'</td><td>'+producteur.nom_producteur+'</td><td>'+producteur.numero_producteur+'</td><td>'+producteur.mail_producteur+'</td><td>'+producteur.commune_producteur+'</td></tr>');
+function afficher()
+{
+	console.log(producteur);
+	$("#table").append('<tr><td class="id">'+i+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td></tr>');
+}
+
+
+
 
