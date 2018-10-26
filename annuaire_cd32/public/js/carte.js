@@ -3,14 +3,17 @@ var map = L.map('map').setView([43.64638, 0.586709], 13);
 //Differentes positions des producteurs sur la carte.
 var producteur = [];
 var tabProducteur = [];
+
 // Structure de la carte.
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 // Marqueur fixe au premier affichage
 L.marker([43.64, 0.58]).addTo(map)
 .bindPopup('Fiche producteur.')
 .openPopup();
+
 // Affichage des marqueurs sur la carte.
 for (var i = 0; i < producteur.length; i++)
 {
@@ -18,6 +21,7 @@ for (var i = 0; i < producteur.length; i++)
 	.bindPopup(producteur[i][0])
 	.addTo(map);
 }
+
 // Lien vers le controlleur qui est en relation vers la bdd.
 $.ajax({
 	url: "/apiProducteur",

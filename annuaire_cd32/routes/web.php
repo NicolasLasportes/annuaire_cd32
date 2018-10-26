@@ -21,4 +21,8 @@ Route::get('/carte', function () {
 
 Route::get('/apiProducteur', 'apiProducteur@getProducteurs');
 
-Route::get('/carteUtilisateur', 'apiProducteurUtilisateur@getProducteurs');
+// route qui affiche la page /carteUtilisateur créée dans le contrôleur apiProducteurUtilisateur.php
+Route::get('/carteUtilisateur', 'apiProducteurUtilisateur@displayProducteurs');
+
+// route qui affiche la page /apiCarteUtilisateur créée dans le contrôleur apiProducteurUtilisateur.php
+Route::get('/apiCarteUtilisateur', 'apiProducteurUtilisateur@getProducteurs');

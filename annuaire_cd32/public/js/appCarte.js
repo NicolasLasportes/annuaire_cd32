@@ -2,32 +2,32 @@
 var auch = [43.646548, 0.601992];
 var map = L.map('map').setView(auch,6);
 
-	// APPEL DE LA TILELAYER
-	L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-		maxZoom: 20
-	}).addTo(map);
+// APPEL DE LA TILELAYER
+L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+	maxZoom: 20
+}).addTo(map);
 
-// AFFICHAGE DU MARKER ET DU POPUP
+// AFFICHAGE DU MARKER ET DE LA POPUP
 var marker = L.marker(auch,).addTo(map);
-	marker.bindPopup('<h6> Mon domicile </h6>');
+	marker.bindPopup('<h6>Mon domicile</h6>');
 
 // LIEN VERS LE CONTRÔLEUR EN RELATION AVEC LA BDD
 $.ajax({
 	url: "/apiProducteurUtilisateur",
 	method: "GET",
 	dataType: "json"
-
 // FONCTION POUR RÉCUPÉRER LES DONNÉES JSON 
-}).done(function(tousLesProducteurs)
-{
-	console.log(tousLesProducteurs[0].code_postal_producteur);
-})
+}).done(function(tousLesProducteurs) {
+
+	console.log(tousLesProducteurs);
+	tablProducteur = tousLesProducteurs
+});
 
  // DESACTIVAITON DU BOUTON DE RECHERCHE SUR LA PAGE CARTE
 $("#rechercher").click(function()
 {
 	return false;
-})
+});
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
