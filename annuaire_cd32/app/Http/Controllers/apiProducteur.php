@@ -19,7 +19,7 @@ class apiProducteur extends Controller
 
         try
         {
-            $bdd = new \PDO('mysql:host=localhost;dbname=annuaire_producteur_cd32', 'loups', 'Qwant00;');
+            $bdd = new \PDO('mysql:host=localhost;dbname=conseil_departemental', 'simoccauch30', 'mamanjetaime4812');
         }
         catch(Exception $e)
         {

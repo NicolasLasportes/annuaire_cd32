@@ -50,7 +50,24 @@ $("#rechercher").click(function()
 function afficher()
 {
 	console.log(producteur);
-	$("#table").append('<tr><td class="id">'+i+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td><td>'+producteur.label_producteur+'</td></tr>');
+	$("#table").empty();
+	// $("#table").show();
+	if(producteur == null)
+	{
+		
+	}
+	else
+	{
+		for(var i = 0; i<producteur.length; i++)
+		{
+			$("#table").append('<tr><td class="id">'+i+'</td><td>'
+				+producteur.label_producteur+'</td><td>'
+				+producteur.label_producteur+'</td><td>'
+				+producteur.label_producteur+'</td><td>'
+				+producteur.label_producteur+'</td></tr>'
+			);
+		}
+	}
 }
 
 
