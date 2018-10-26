@@ -6,8 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ActiviteCommercialeTableSeeder' => $baseDir . '/database/seeds/ActiviteCommercialeTableSeeder.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminActiviteCommerciale1Controller' => $baseDir . '/app/Http/Controllers/AdminActiviteCommerciale1Controller.php',
+    'App\\Http\\Controllers\\AdminActiviteCommercialeController' => $baseDir . '/app/Http/Controllers/AdminActiviteCommercialeController.php',
     'App\\Http\\Controllers\\AdminActivitesCommercialesController' => $baseDir . '/app/Http/Controllers/AdminActivitesCommercialesController.php',
     'App\\Http\\Controllers\\AdminCategorie13Controller' => $baseDir . '/app/Http/Controllers/AdminCategorie13Controller.php',
     'App\\Http\\Controllers\\AdminCategorie24Controller' => $baseDir . '/app/Http/Controllers/AdminCategorie24Controller.php',
@@ -25,7 +28,8 @@ return array(
     'App\\Http\\Controllers\\AdminProduitController' => $baseDir . '/app/Http/Controllers/AdminProduitController.php',
     'App\\Http\\Controllers\\AdminSiqo1Controller' => $baseDir . '/app/Http/Controllers/AdminSiqo1Controller.php',
     'App\\Http\\Controllers\\AdminSiqoController' => $baseDir . '/app/Http/Controllers/AdminSiqoController.php',
-    'App\\Http\\Controllers\\AdminSousCategorieController' => $baseDir . '/app/Http/Controllers/AdminSousCategorieController.php',
+    'App\\Http\\Controllers\\AdminSousCategorie23Controller' => $baseDir . '/app/Http/Controllers/AdminSousCategorie23Controller.php',
+    'App\\Http\\Controllers\\AdminSousCategorie24Controller' => $baseDir . '/app/Http/Controllers/AdminSousCategorie24Controller.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -33,6 +37,8 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\CBHook' => $baseDir . '/app/Http/Controllers/CBHook.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\apiProducteur' => $baseDir . '/app/Http/Controllers/apiProducteur.php',
+    'App\\Http\\Controllers\\apiProducteurUtilisateur' => $baseDir . '/app/Http/Controllers/apiProducteurUtilisateur.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -47,6 +53,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\producteur' => $baseDir . '/app/producteur.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
     'Barryvdh\\DomPDF\\PDF' => $vendorDir . '/barryvdh/laravel-dompdf/src/PDF.php',
     'Barryvdh\\DomPDF\\ServiceProvider' => $vendorDir . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',

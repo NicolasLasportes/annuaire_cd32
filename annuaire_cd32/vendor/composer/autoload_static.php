@@ -465,8 +465,11 @@ class ComposerStaticInit43c01dda27faec94fbfd2ce23255ab9e
     );
 
     public static $classMap = array (
+        'ActiviteCommercialeTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ActiviteCommercialeTableSeeder.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminActiviteCommerciale1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminActiviteCommerciale1Controller.php',
+        'App\\Http\\Controllers\\AdminActiviteCommercialeController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminActiviteCommercialeController.php',
         'App\\Http\\Controllers\\AdminActivitesCommercialesController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminActivitesCommercialesController.php',
         'App\\Http\\Controllers\\AdminCategorie13Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCategorie13Controller.php',
         'App\\Http\\Controllers\\AdminCategorie24Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCategorie24Controller.php',
@@ -484,7 +487,8 @@ class ComposerStaticInit43c01dda27faec94fbfd2ce23255ab9e
         'App\\Http\\Controllers\\AdminProduitController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminProduitController.php',
         'App\\Http\\Controllers\\AdminSiqo1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSiqo1Controller.php',
         'App\\Http\\Controllers\\AdminSiqoController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSiqoController.php',
-        'App\\Http\\Controllers\\AdminSousCategorieController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSousCategorieController.php',
+        'App\\Http\\Controllers\\AdminSousCategorie23Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSousCategorie23Controller.php',
+        'App\\Http\\Controllers\\AdminSousCategorie24Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminSousCategorie24Controller.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -492,6 +496,8 @@ class ComposerStaticInit43c01dda27faec94fbfd2ce23255ab9e
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\CBHook' => __DIR__ . '/../..' . '/app/Http/Controllers/CBHook.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\apiProducteur' => __DIR__ . '/../..' . '/app/Http/Controllers/apiProducteur.php',
+        'App\\Http\\Controllers\\apiProducteurUtilisateur' => __DIR__ . '/../..' . '/app/Http/Controllers/apiProducteurUtilisateur.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -506,6 +512,7 @@ class ComposerStaticInit43c01dda27faec94fbfd2ce23255ab9e
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\producteur' => __DIR__ . '/../..' . '/app/producteur.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
         'Barryvdh\\DomPDF\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
