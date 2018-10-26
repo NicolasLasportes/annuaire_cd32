@@ -17,7 +17,7 @@ class Siqo extends Migration
             $table->increments('id');
             $table->string('nom_siqo');
             $table->timestamps();
-        });      
+        });
     }
 
     /**
@@ -27,6 +27,6 @@ class Siqo extends Migration
      */
     public function down()
     {
-        Schema::drop('siqo');    
+        Schema::drop('siqo');
     }
 }

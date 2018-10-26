@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminCategorie13Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminActiviteCommercialeController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,23 +25,22 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "categorie";
+			$this->table = "activite_commerciale";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nom Categorie","name"=>"nom_categorie"];
+			$this->col[] = ["label"=>"Nom Activite","name"=>"nom_activite"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nom Categorie','name'=>'nom_categorie','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Id','name'=>'nom_categorie','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Nom Activite','name'=>'nom_activite','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nom Categorie','name'=>'nom_categorie','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ["label"=>"Nom Activite","name"=>"nom_activite","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 

@@ -17,7 +17,6 @@ php artisan iseed cms_statistics
 php artisan iseed cms_statistic_components
 php artisan iseed cms_users
 php artisan iseed migrations
-php artisan iseed siqo
 php artisan iseed marque
 php artisan iseed preferer
 php artisan iseed produit
@@ -27,3 +26,4 @@ php artisan iseed chef
 php artisan iseed categorie
 php artisan iseed commentaire
 php artisan iseed sous_categorie
+php artisan iseed siqo

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Marque extends Migration
+class ActiviteCommerciale extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class Marque extends Migration
      */
     public function up()
     {
-        Schema::create('marque', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nom_marque');
-            $table->timestamps();
-        });
+      Schema::create('activite_commerciale', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('nom_activite');
+          $table->timestamps();
+      });
     }
 
     /**
@@ -27,6 +27,6 @@ class Marque extends Migration
      */
     public function down()
     {
-        Schema::drop('marque');
+        schema::drop(activite_commerciale);
     }
 }
