@@ -33,16 +33,19 @@ $.ajax({
 
 $("#rechercher").click(function()
 {
+	console.log(tabProducteur);
 	for(i=0; i < tabProducteur.length; i++)
 	{
-		var trouver=$("#input").val().toUpperCase();
-		if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
-		{
-			alert('la comparaison est trouvé');	
+		console.log(tabProducteur[i].nom_producteur);
+
+		var recherche = $("#input").val().toUpperCase();
+		// if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
+		// {
+		// 	alert('la comparaison est trouvé');	
 			
-		}
+		// }
 	}	
-	producteur = tabProducteur;
+	//producteur = tabProducteur;
 	return false;
 })
 
