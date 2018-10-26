@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminSousCategorieController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminSousCategorie24Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -30,20 +30,20 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nom","name"=>"nom"];
-			$this->col[] = ["label"=>"Categorie","name"=>"id","join"=>"categorie,nom_categorie"];
+			$this->col[] = ["label"=>"Nom Sous Categorie","name"=>"nom_sous_categorie"];
+			$this->col[] = ["label"=>"Categorie","name"=>"id_categorie","join"=>"categorie,id"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Categorie','name'=>'id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Nom Sous Categorie','name'=>'nom_sous_categorie','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Categorie','name'=>'id_categorie','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'categorie,id'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Categorie','name'=>'id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-9'];
+			//$this->form[] = ["label"=>"Nom Sous Categorie","name"=>"nom_sous_categorie","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Categorie","name"=>"id_categorie","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"categorie,id"];
 			# OLD END FORM
 
 			/* 
