@@ -31,7 +31,7 @@
 		</form>
 	</nav>
 
-	<div class="icones">
+	<nav id="nav1" class="navbar navbar-light bg-light">
 		<ul id="menuDeroulant">
 			<li>
 				<a href="#"><img src="images/viande.png" width="60" height="60" alt=""></a>
@@ -106,7 +106,7 @@
 			</li>
 
 			<li>
-				<a href="#"><img src="images/cereale_legumineuse.jpg" width="60" height="60" alt=""></a>
+				<a href="#"><img src="images/cereale_legumineuse.png" width="60" height="60" alt=""></a>
 				<ul class="sousMenu">
 					<li><a href="#">oeuf</a></li>
 					<li><a href="#">lait</a></li>
@@ -115,7 +115,7 @@
 			</li>
 
 			<li>
-				<a href="#"><img src="images/boisson.jpg" width="60" height="60" alt=""></a>
+				<a href="#"><img src="images/boisson.png" width="60" height="60" alt=""></a>
 				<ul class="sousMenu">
 					<li><a href="#">oeuf</a></li>
 					<li><a href="#">lait</a></li>
@@ -123,12 +123,12 @@
 				</ul>
 			</li>
 		</ul>
-	</div>
+	</nav>
+	
 	<div id="map"></div>
-	<div id="table"></div>
 
 	<button type="button" class="btn btn-secondary btn-lg btn-block">Afficher les producteurs ciblé</button>
-
+	<div id="table"></div>
 	<script type="text/javascript"src="leaflet/leaflet.js"></script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
