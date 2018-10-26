@@ -34,20 +34,81 @@ $.ajax({
 })
 
 function recherche(producteur)
-{
-	alert("éezra")
-	console.log(producteur);
-	// for(i=0; i < tabProducteur.length; i++)
-	// {
-	// 	var recherche = $("#input").val().toUpperCase();
-	// 	// if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
-	// 	// {
-	// 	// 	alert('la comparaison est trouvé');	
-			
-	// 	// }
-	// }	
-	// //producteur = tabProducteur;
-	// return false;
+{	
+	console.log(producteur)
+	var recherche = $("#saisieRecherche").val().toUpperCase();
+	for(var i = 0; i < producteur.length; i++)
+	{
+		console.log("je boucle "+i+ " fois")
+		if(producteur[i].nom_entreprise_producteur === null || producteur[i].lieu_dit_producteur === null || producteur[i].numero_producteur || producteur[i].voie_producteur || producteur[i].code_postal_producteur ||producteur[i].commune_producteur || producteur[i].nom_producteur || producteur[i].telephone_un_producteur ||producteur[i].telephone_deux_producteur || producteur[i].coordonneeDD_producteur || producteur[i].mail_producteur ||producteur[i].site_internet_producteur)
+		{
+
+		}
+		if (recherche == producteur[i].nom_entreprise_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].lieu_dit_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].numero_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].voie_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].code_postal_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].commune_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].nom_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].telephone_un_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].telephone_deux_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].coordonneeDD_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].mail_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		if (recherche == producteur[i].site_internet_producteur.toUpperCase()) 
+		{
+			alert('la comparaison est trouvé');	
+		}
+
+		else
+		{
+			alert("ca marche pas");
+		}
+	}	
 }
 
 function afficher(producteur)

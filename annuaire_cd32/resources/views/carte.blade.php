@@ -25,10 +25,10 @@
 				<a class="dropdown-item" href="#">Liste Produit</a>
 			</div>
 		</div>	
-		<form class="form-inline">
+		<div class="form-inline">
 			<input id="saisieRecherche"class="form-control mr-sm-2" type="search" placeholder="Rechercher..." aria-label="Search">
 			<button id="rechercher" class="btn btn-outline-secondary my-2 my-sm-0">Recherche</button>
-		</form>
+		</div>
 	</nav>
 
 
