@@ -35,7 +35,6 @@ $.ajax({
 
 $("#rechercher").click(function()
 {
-	console.log(tabProducteur);
 	for(i=0; i < tabProducteur.length; i++)
 	{
 		console.log(tabProducteur[i].nom_producteur);
