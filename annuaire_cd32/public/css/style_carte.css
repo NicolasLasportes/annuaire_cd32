@@ -16,7 +16,104 @@ html body {
 	margin: auto;
 }
 
+<<<<<<< HEAD
 /* COPYRIGHT */
 #copyright {
 	font-size: 0.5em;
 }
+=======
+.icones{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+/*#menuDeroulant {
+    width: 644px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#menuDeroulant li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#menuDeroulant .sousMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#menuDeroulant .sousMenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#menuDeroulant li {
+    float: left;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#menuDeroulant li a:link, #menuDeroulant li a:visited {
+    display: block;
+    height: 1%;
+    color: black;
+    margin: 0;
+    padding: 4px 8px;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+}
+#menuDeroulant li a:hover { background-color: #FFF; }
+#menuDeroulant li a:active { background-color: #FFF; }
+
+#menuDeroulant .sousMenu li a:link,
+#menuDeroulant .sousMenu li a:visited {
+    display: block;
+    color: black;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+#menuDeroulant .sousMenu li a:hover {
+    background-image: none;
+    background-color: grey;
+}
+
+#menuDeroulant .sousMenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 149px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+#menuDeroulant .sousMenu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#menuDeroulant li:hover > .sousMenu { display: block; }
+*/
+table, tbody, thead, th, tr, td{
+	border: solid 1px black;
+}
+
+#tableau{
+	text-align: center;
+}
+>>>>>>> 276e5a1bdd2ea81fa3ee99287e819e343c583eec
