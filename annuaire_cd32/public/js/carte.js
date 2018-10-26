@@ -51,7 +51,7 @@ function afficher()
 {
 	console.log(producteur);
 	$("#table").empty();
-	// $("#table").show();
+	$("#table").show();
 	if(producteur == null)
 	{
 		
