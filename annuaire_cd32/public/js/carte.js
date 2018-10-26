@@ -50,22 +50,33 @@ $("#rechercher").click(function()
 function afficher()
 {
 	console.log(producteur);
-	$("#table").empty();
-	$("#table").show();
 	if(producteur == null)
 	{
-		
+
 	}
 	else
 	{
 		for(var i = 0; i<producteur.length; i++)
 		{
-			$("#table").append('<tr><td class="id">'+i+'</td><td>'
-				+producteur.label_producteur+'</td><td>'
-				+producteur.label_producteur+'</td><td>'
-				+producteur.label_producteur+'</td><td>'
-				+producteur.label_producteur+'</td></tr>'
+			$("#table").append('<tr>'+
+				'<td class="id">'+i+'</td>'+
+				'<td>'+producteur[i].code_postal_producteur+'</td>'+
+				'<td>'+producteur[i].coordonneeDD_producteur+'</td>'+
+				'<td>'+producteur[i].created_at+'</td>'+
+				'<td>'+producteur[i].id_producteur+'</td>'+
+				'<td>'+producteur[i].lieu_dit_producteur+'</td>'+
+				'<td>'+producteur[i].mail_producteur+'</td>'+
+				'<td>'+producteur[i].nom_entreprise_producteur+'</td>'+
+				'<td>'+producteur[i].nom_producteur+'</td>'+
+				'<td>'+producteur[i].numero_producteur+'</td>'+
+				'<td>'+producteur[i].site_internet_producteur+'</td>'+
+				'<td>'+producteur[i].telephone_deux_producteur+'</td>'+
+				'<td>'+producteur[i].telephone_un_producteur+'</td>'+
+				'<td>'+producteur[i].updated_at+'</td>'+
+				'<td>'+producteur[i].voie_producteur+'</td>'+
+				'</tr>'
 			);
+			console.log($("#table"));
 		}
 	}
 }

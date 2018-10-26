@@ -14,7 +14,9 @@ html body{
 
 .icones{
 	display: flex;
+	flex-direction: row;
 	justify-content: space-around;
+	align-items: center;
 }
 
 #menuDeroulant {
@@ -55,27 +57,26 @@ html body{
 #menuDeroulant li a:link, #menuDeroulant li a:visited {
     display: block;
     height: 1%;
-    color: #FFF;
-    background: #3B4E77;
+    color: black;
     margin: 0;
     padding: 4px 8px;
     border-right: 1px solid #fff;
     text-decoration: none;
 }
-#menuDeroulant li a:hover { background-color: #F2462E; }
-#menuDeroulant li a:active { background-color: #5F879D; }
+#menuDeroulant li a:hover { background-color: #FFF; }
+#menuDeroulant li a:active { background-color: #FFF; }
 
 #menuDeroulant .sousMenu li a:link,
 #menuDeroulant .sousMenu li a:visited {
     display: block;
-    color: #FFF;
+    color: black;
     margin: 0;
     border: 0;
     text-decoration: none;
 }
 #menuDeroulant .sousMenu li a:hover {
     background-image: none;
-    background-color: #F2462E;
+    background-color: grey;
 }
 
 #menuDeroulant .sousMenu li {
