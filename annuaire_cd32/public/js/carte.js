@@ -26,15 +26,13 @@ $.ajax({
 //fonction pour recuperer les données JSON. 
 }).done(function(tousLesProducteurs)
 {
-	console.log(tousLesProducteurs);
 	tabProducteur = tousLesProducteurs;
 	producteur = tousLesProducteurs;
 	afficher(producteur);
 
 	// Désactivation du boutton de recherche sur la page carte.
 })
-console.log(producteur);
-console.log(tabProducteur);
+
 $("#rechercher").click(function()
 {
 	console.log(tabProducteur);
@@ -55,25 +53,21 @@ $("#rechercher").click(function()
 
 function afficher(producteur)
 {
-	console.log(producteur.length);
-	alert('BONCHOUREEELSE');
 	for(var i = 0; i<producteur.length; i++)
 	{
-	console.log("I = "+i);
-	console.log("BONCHOUREEFOR")
-	$("#table").append('<tr>'+
-	'<td>'+producteur[i].code_postal_producteur+'</td>'+
-	'<td>'+producteur[i].coordonneeDD_producteur+'</td>'+
-	'<td>'+producteur[i].lieu_dit_producteur+'</td>'+
-	'<td>'+producteur[i].mail_producteur+'</td>'+
-	'<td>'+producteur[i].nom_entreprise_producteur+'</td>'+
-	'<td>'+producteur[i].nom_producteur+'</td>'+
-	'<td>'+producteur[i].numero_producteur+'</td>'+
-	'<td>'+producteur[i].site_internet_producteur+'</td>'+
-	'<td>'+producteur[i].telephone_deux_producteur+'</td>'+
-	'<td>'+producteur[i].telephone_un_producteur+'</td>'+
-	'<td>'+producteur[i].voie_producteur+'</td>'+
-	'</tr>');
+		$("#table").append('<tr>'+
+		'<td>'+producteur[i].code_postal_producteur+'</td>'+
+		'<td>'+producteur[i].coordonneeDD_producteur+'</td>'+
+		'<td>'+producteur[i].lieu_dit_producteur+'</td>'+
+		'<td>'+producteur[i].mail_producteur+'</td>'+
+		'<td>'+producteur[i].nom_entreprise_producteur+'</td>'+
+		'<td>'+producteur[i].nom_producteur+'</td>'+
+		'<td>'+producteur[i].numero_producteur+'</td>'+
+		'<td>'+producteur[i].site_internet_producteur+'</td>'+
+		'<td>'+producteur[i].telephone_deux_producteur+'</td>'+
+		'<td>'+producteur[i].telephone_un_producteur+'</td>'+
+		'<td>'+producteur[i].voie_producteur+'</td>'+
+		'</tr>');
 	}
 
 
