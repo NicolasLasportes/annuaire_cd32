@@ -30,7 +30,37 @@
 			<button id="rechercher" class="btn btn-outline-secondary my-2 my-sm-0">Recherche</button>
 		</form>
 	</nav>
-
+	<!-- <div class="icones">
+		<a href="#"><img src="images/boulangerie.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/epicerie.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/fruit.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/legume.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/milk.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/multiple.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/poisson.png" width="60" height="60" alt=""></a>
+		<a href="#"><img src="images/viande.png" width="60" height="60" alt=""></a>
+	</div> -->
+	<div>
+		<ul id="menuDeroulant">
+			<li>
+				<a href="#"><img src="images/viande.png" width="60" height="60" alt=""></a>
+				<ul class="sousMenu">
+					<li><a href="#">bovin</a></li>
+					<li><a href="#">ovin</a></li>
+					<li><a href="#">volaille</a></li>
+				</ul>
+			</li>
+			<br>
+			<li>
+				<a href="#"><img src="images/milk.png" width="60" height="60" alt=""></a>
+				<ul class="sousMenu">
+					<li><a href="#">oeuf</a></li>
+					<li><a href="#">lait</a></li>
+					<li><a href="#">fromage</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 	<div id="map"></div>
 	<div id="table"></div>
 
