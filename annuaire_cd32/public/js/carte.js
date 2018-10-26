@@ -33,22 +33,21 @@ $.ajax({
 	// Désactivation du boutton de recherche sur la page carte.
 })
 
-$("#rechercher").click(function()
+function recherche(producteur)
 {
-	for(i=0; i < tabProducteur.length; i++)
-	{
-		console.log(tabProducteur[i].nom_producteur);
-
-		var recherche = $("#input").val().toUpperCase();
-		// if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
-		// {
-		// 	alert('la comparaison est trouvé');	
+	alert("binxefe")
+	// for(i=0; i < tabProducteur.length; i++)
+	// {
+	// 	var recherche = $("#input").val().toUpperCase();
+	// 	// if (trouver==tabProducteur[i].label_producteur.toUpperCase()) 
+	// 	// {
+	// 	// 	alert('la comparaison est trouvé');	
 			
-		// }
-	}	
-	//producteur = tabProducteur;
-	return false;
-})
+	// 	// }
+	// }	
+	// //producteur = tabProducteur;
+	// return false;
+}
 
 function afficher(producteur)
 {
@@ -73,6 +72,7 @@ function afficher(producteur)
 }
 
 
+$("#rechercher").click(recherche);
 
 
 
