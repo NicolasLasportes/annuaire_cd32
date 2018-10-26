@@ -35,7 +35,8 @@ $.ajax({
 
 function recherche(producteur)
 {
-	alert("binxefe")
+	alert("éezra")
+	console.log(producteur);
 	// for(i=0; i < tabProducteur.length; i++)
 	// {
 	// 	var recherche = $("#input").val().toUpperCase();
@@ -72,7 +73,10 @@ function afficher(producteur)
 }
 
 
-$("#rechercher").click(recherche);
+$("#rechercher").click(function()
+{
+	recherche(tabProducteur);
+});
 
 
 
