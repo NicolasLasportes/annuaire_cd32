@@ -16,10 +16,10 @@ html body{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+
 }
 
-#menuDeroulant {
+/*#menuDeroulant {
     width: 644px;
     list-style-type: none;
     margin: 0;
@@ -98,13 +98,11 @@ html body{
 }
 
 #menuDeroulant li:hover > .sousMenu { display: block; }
+*/
+table, tbody, thead, th, tr, td{
+	border: solid 1px black;
+}
 
-#menuDeroulant {
-    width: 644px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    top: 0;
-    left: 0;
+#tableau{
+	text-align: center;
 }

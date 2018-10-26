@@ -56,7 +56,7 @@ function afficher(producteur)
 	{
 		$("#table").append('<tr>'+
 		'<td>'+producteur[i].code_postal_producteur+'</td>'+
-		'<td>'+producteur[i].coordonneeDD_producteur+'</td>'+
+		'<td>'+'['+producteur[i].coordonneeDD_producteur+']'+'</td>'+
 		'<td>'+producteur[i].lieu_dit_producteur+'</td>'+
 		'<td>'+producteur[i].mail_producteur+'</td>'+
 		'<td>'+producteur[i].nom_entreprise_producteur+'</td>'+
@@ -66,12 +66,10 @@ function afficher(producteur)
 		'<td>'+producteur[i].telephone_deux_producteur+'</td>'+
 		'<td>'+producteur[i].telephone_un_producteur+'</td>'+
 		'<td>'+producteur[i].voie_producteur+'</td>'+
+		'<td>'+producteur[i].commune_producteur+'</td>'+
 		'</tr>');
 	}
-
-
 }
-
 
 $("#rechercher").click(function()
 {

@@ -15,8 +15,8 @@
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Producteur</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">Ajouter Producteur</a>
-				<a class="dropdown-item" href="#">Liste Producteur</a>
+				<a class="dropdown-item" href="http://127.0.0.1:8000/admin/producteur19">Ajouter Producteur</a>
+				<a class="dropdown-item liste" href="http://127.0.0.1:8000/admin/producteur19">Liste Producteur</a>
 			</div>
 		</div>
 		<div class="dropdown">
@@ -31,107 +31,150 @@
 		</form>
 	</nav>
 
-	<nav id="nav1" class="navbar navbar-light bg-light">
-		<ul id="menuDeroulant">
-			<li>
+
+	<div class="icones">
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/viande.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">bovin</a></li>
-					<li><a href="#">ovin</a></li>
-					<li><a href="#">volaille</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/milk.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/boulangerie.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/epicerie.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/fruit.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/legume.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/multiple.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/poisson.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
 
-			<li>
+		<div class="dropdown">
+			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<img src="images/boisson.png" width="60" height="60" alt="Icone boisson">
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action 1</a>
+				<a class="dropdown-item" href="#">Action 2</a>
+				<a class="dropdown-item" href="#">Action 3</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="btn btn-ligth dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<a href="#"><img src="images/cereale_legumineuse.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
+	</ul>
+</div>
 
-			<li>
-				<a href="#"><img src="images/boisson.png" width="60" height="60" alt=""></a>
-				<ul class="sousMenu">
-					<li><a href="#">oeuf</a></li>
-					<li><a href="#">lait</a></li>
-					<li><a href="#">fromage</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
-	
-	<div id="map"></div>
+<div id="map"></div>
 
-	<button type="button" class="btn btn-secondary btn-lg btn-block">Afficher les producteurs ciblé</button>
-	<div id="table"></div>
-	<script type="text/javascript"src="leaflet/leaflet.js"></script>
-	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/carte.js"></script>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Afficher les producteurs ciblé</button>
+
+<div id="tableau">
+	<table>
+		<thead>
+			<th>Code postal</th>
+			<th>coordonnées DD</th>
+			<th>Lieut-dit</th>
+			<th>Email</th>
+			<th>Nom entreprise</th>
+			<th>Nom producteur</th>
+			<th>Numero producteur</th>
+			<th>Site internet</th>
+			<th>Téléphone 1</th>
+			<th>Téléphone 2</th>
+			<th>Voie</th>
+			<th>Ville</th>
+		</thead>
+		<tbody id="table">
+			<!-- Affichage du tableau des producteur de la page admin. -->
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript"src="leaflet/leaflet.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/js/dist/dropdown.js"></script>
+<script type="text/javascript" src="js/carte.js"></script>
 </body>
 </html>
