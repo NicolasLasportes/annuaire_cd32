@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost
--- Généré le :  Ven 26 Octobre 2018 à 11:05
+-- Généré le :  Mer 31 Octobre 2018 à 11:16
 -- Version du serveur :  5.7.24-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.10-0ubuntu0.18.04.1
 
@@ -17,8 +17,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `annuaire_cd32`
+-- Base de données :  `annuaireCd32_gpe`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activite_commerciale`
+--
+
+CREATE TABLE `activite_commerciale` (
+  `id` int(11) NOT NULL,
+  `nom_activite` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `activite_commerciale`
+--
+
+INSERT INTO `activite_commerciale` (`id`, `nom_activite`) VALUES
+(1, 'Boucherie'),
+(2, 'Boulangerie'),
+(3, 'Distributeur'),
+(4, 'primeur'),
+(5, 'Groupement  Producteurs'),
+(6, 'Producteur'),
+(7, 'Transformateur');
 
 -- --------------------------------------------------------
 
@@ -27,7 +51,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `categorie` (
-  `id_categorie` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `nom_categorie` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -37,7 +61,7 @@ CREATE TABLE `categorie` (
 -- Contenu de la table `categorie`
 --
 
-INSERT INTO `categorie` (`id_categorie`, `nom_categorie`, `created_at`, `updated_at`) VALUES
+INSERT INTO `categorie` (`id`, `nom_categorie`, `created_at`, `updated_at`) VALUES
 (1, 'Viande', '2018-10-23 11:54:04', '2018-10-23 11:54:04'),
 (2, 'Boulangerie', '2018-10-23 11:54:04', '2018-10-23 11:54:04'),
 (3, 'Multiple', '2018-10-23 11:54:04', '2018-10-23 11:54:04'),
@@ -166,7 +190,7 @@ CREATE TABLE `cms_email_templates` (
 --
 
 INSERT INTO `cms_email_templates` (`id`, `name`, `slug`, `subject`, `content`, `description`, `from_name`, `from_email`, `cc_email`, `created_at`, `updated_at`) VALUES
-(1, 'Email Template Forgot Password Backend', 'forgot_password_backend', NULL, '<p>Hi,</p><p>Someone requested forgot password, here is your new password : </p><p>[password]</p><p><br></p><p>--</p><p>Regards,</p><p>Admin</p>', '[password]', 'System', 'system@crudbooster.com', NULL, '2018-10-24 15:00:34', NULL);
+(1, 'Email Template Forgot Password Backend', 'forgot_password_backend', NULL, '<p>Hi,</p><p>Someone requested forgot password, here is your new password : </p><p>[password]</p><p><br></p><p>--</p><p>Regards,</p><p>Admin</p>', '[password]', 'System', 'system@crudbooster.com', NULL, '2018-10-24 15:00:34', NULL);
 
 -- --------------------------------------------------------
 
@@ -185,6 +209,42 @@ CREATE TABLE `cms_logs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `cms_logs`
+--
+
+INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `details`, `id_cms_users`, `created_at`, `updated_at`) VALUES
+(1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/module_generator/delete/12', 'Delete data Catégorie des produits at Module Generator', '', 1, '2018-10-25 07:49:00', NULL),
+(2, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/sous_categorie/add-save', 'Add New Data  at Sous catégorie de Produits', '', 1, '2018-10-25 07:59:18', NULL),
+(3, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/sous_categorie/add-save', 'Add New Data  at Sous catégorie de Produits', '', 1, '2018-10-25 08:05:07', NULL),
+(4, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/sous_categorie/delete/2', 'Delete data 2 at Sous catégorie de Produits', '', 1, '2018-10-25 08:05:23', NULL),
+(5, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/siqo/add-save', 'Add New Data  at SIQO', '', 1, '2018-10-25 09:47:04', NULL),
+(6, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/siqo/add-save', 'Add New Data  at SIQO', '', 1, '2018-10-25 09:47:13', NULL),
+(7, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://localhost/annuaire_cd32/annuaire_cd32/public/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-25 11:01:11', NULL),
+(8, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8007/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-25 11:21:54', NULL),
+(9, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-25 11:58:12', NULL),
+(23, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/module_generator/delete/22', 'Delete data Sous Catégorie de Produits at Module Generator', '', 1, '2018-10-26 12:10:07', NULL),
+(24, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/users/add-save', 'Add New Data admin at Users Management', '', 1, '2018-10-26 12:35:35', NULL),
+(25, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/users/add-save', 'Add New Data user at Users Management', '', 1, '2018-10-26 12:36:08', NULL),
+(26, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@cd32.com login with IP Address 127.0.0.1', '', 4, '2018-10-26 12:39:25', NULL),
+(27, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-26 12:40:33', NULL),
+(28, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Update data Catégorie des produits at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr></tbody></table>', 1, '2018-10-26 12:46:22', NULL),
+(29, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/3', 'Update data Chefs at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2018-10-26 12:47:14', NULL),
+(30, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/4', 'Update data Commentaires at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2018-10-26 12:48:54', NULL),
+(31, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/7', 'Update data Producteurs at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>6</td><td></td></tr></tbody></table>', 1, '2018-10-26 12:49:18', NULL),
+(32, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/18', 'Update data Sous catégorie de produits at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>10</td><td></td></tr></tbody></table>', 1, '2018-10-26 12:49:44', NULL),
+(33, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/9', 'Update data Produits at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>8</td><td></td></tr></tbody></table>', 1, '2018-10-26 12:50:11', NULL),
+(34, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/users/edit-save/5', 'Update data user at Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$ZGh/5iVJRkvJ2O0rJ3adOuufsBbFX5w.pWmZGgPAcYLeayue0eGxG</td><td>$2y$10$vLTxT4KXSqgi35v/EeM2TO08iE9kQpp5btmR1KNuz/CTUvS8DItj.</td></tr><tr><td>status</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-26 12:53:10', NULL),
+(35, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'user@cd32.com login with IP Address 127.0.0.1', '', 5, '2018-10-26 12:56:14', NULL),
+(36, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-26 12:59:07', NULL),
+(37, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@cd32.com login with IP Address 127.0.0.1', '', 4, '2018-10-26 13:00:45', NULL),
+(38, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'user@cd32.com login with IP Address 127.0.0.1', '', 5, '2018-10-26 13:01:22', NULL),
+(39, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'user@cd32.com login with IP Address 127.0.0.1', '', 5, '2018-10-26 13:03:28', NULL),
+(40, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-26 13:08:23', NULL),
+(41, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'user@cd32.com login with IP Address 127.0.0.1', '', 5, '2018-10-26 13:09:16', NULL),
+(42, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-29 07:03:42', NULL),
+(43, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2018-10-29 07:07:34', NULL);
 
 -- --------------------------------------------------------
 
@@ -208,6 +268,23 @@ CREATE TABLE `cms_menus` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Contenu de la table `cms_menus`
+--
+
+INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
+(2, 'Catégorie des produits', 'Route', 'AdminCategorie13ControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 1, '2018-10-25 07:49:19', '2018-10-26 12:46:22'),
+(3, 'Chefs', 'Route', 'AdminChef1ControllerGetIndex', 'normal', 'fa fa-coffee', 0, 1, 0, 1, 2, '2018-10-25 07:50:30', '2018-10-26 12:47:14'),
+(4, 'Commentaires', 'Route', 'AdminCommentaire1ControllerGetIndex', 'normal', 'fa fa-pencil', 0, 1, 0, 1, 3, '2018-10-25 07:51:02', '2018-10-26 12:48:54'),
+(5, 'Marque des Produits', 'Route', 'AdminMarque1ControllerGetIndex', NULL, 'fa fa-bookmark', 0, 1, 0, 1, 4, '2018-10-25 07:51:39', NULL),
+(6, 'Préférer', 'Route', 'AdminPreferer1ControllerGetIndex', NULL, 'fa fa-heart', 0, 1, 0, 1, 5, '2018-10-25 07:52:21', NULL),
+(7, 'Producteurs', 'Route', 'AdminProducteurControllerGetIndex', 'normal', 'fa fa-book', 0, 1, 0, 1, 6, '2018-10-25 07:53:10', '2018-10-26 12:49:18'),
+(8, 'Produire', 'Route', 'AdminProduireControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 7, '2018-10-25 07:53:57', NULL),
+(9, 'Produits', 'Route', 'AdminProduitControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 8, '2018-10-25 07:55:13', '2018-10-26 12:50:11'),
+(10, 'SIQO', 'Route', 'AdminSiqo1ControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 9, '2018-10-25 07:56:00', NULL),
+(18, 'Sous catégorie de produits', 'Route', 'AdminSousCategorie23ControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 10, '2018-10-26 12:10:32', '2018-10-26 12:49:43'),
+(19, 'Activité commerciale', 'Route', 'AdminActiviteCommerciale1ControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 11, '2018-10-26 12:37:50', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -219,6 +296,34 @@ CREATE TABLE `cms_menus_privileges` (
   `id_cms_menus` int(11) DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `cms_menus_privileges`
+--
+
+INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
+(1, 1, 1),
+(5, 5, 1),
+(6, 6, 1),
+(8, 8, 1),
+(10, 10, 1),
+(11, 11, 1),
+(19, 19, 1),
+(20, 2, 2),
+(21, 2, 1),
+(22, 2, 3),
+(23, 3, 2),
+(24, 3, 1),
+(25, 4, 1),
+(26, 7, 2),
+(27, 7, 1),
+(28, 7, 3),
+(29, 18, 2),
+(30, 18, 1),
+(31, 18, 3),
+(32, 9, 2),
+(33, 9, 1),
+(34, 9, 3);
 
 -- --------------------------------------------------------
 
@@ -255,7 +360,20 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (8, 'Email Templates', 'fa fa-envelope-o', 'email_templates', 'cms_email_templates', 'EmailTemplatesController', 1, 1, '2018-10-24 15:00:33', NULL, NULL),
 (9, 'Statistic Builder', 'fa fa-dashboard', 'statistic_builder', 'cms_statistics', 'StatisticBuilderController', 1, 1, '2018-10-24 15:00:33', NULL, NULL),
 (10, 'API Generator', 'fa fa-cloud-download', 'api_generator', '', 'ApiCustomController', 1, 1, '2018-10-24 15:00:33', NULL, NULL),
-(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2018-10-24 15:00:33', NULL, NULL);
+(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2018-10-24 15:00:33', NULL, NULL),
+(12, 'Catégorie des produits', 'fa fa-glass', 'categorie', 'categorie', 'AdminCategorieController', 0, 0, '2018-10-25 07:42:18', NULL, '2018-10-25 07:49:00'),
+(13, 'Catégorie des Produits', 'fa fa-glass', 'categorie13', 'categorie', 'AdminCategorie13Controller', 0, 0, '2018-10-25 07:49:19', NULL, NULL),
+(14, 'Chefs', 'fa fa-coffee', 'chef', 'chef', 'AdminChef1Controller', 0, 0, '2018-10-25 07:50:30', NULL, NULL),
+(15, 'Commentaires', 'fa fa-pencil', 'commentaire', 'commentaire', 'AdminCommentaire1Controller', 0, 0, '2018-10-25 07:51:02', NULL, NULL),
+(16, 'Marque des Produits', 'fa fa-bookmark', 'marque', 'marque', 'AdminMarque1Controller', 0, 0, '2018-10-25 07:51:39', NULL, NULL),
+(17, 'Préférer', 'fa fa-heart', 'preferer', 'preferer', 'AdminPreferer1Controller', 0, 0, '2018-10-25 07:52:21', NULL, NULL),
+(18, 'Producteurs', 'fa fa-book', 'producteur', 'producteur', 'AdminProducteurController', 0, 0, '2018-10-25 07:53:10', NULL, NULL),
+(19, 'Produire', 'fa fa-bookmark', 'produire', 'produire', 'AdminProduireController', 0, 0, '2018-10-25 07:53:57', NULL, NULL),
+(20, 'Produits', 'fa fa-star', 'produit', 'produit', 'AdminProduitController', 0, 0, '2018-10-25 07:55:13', NULL, NULL),
+(21, 'SIQO', 'fa fa-star', 'siqo', 'siqo', 'AdminSiqo1Controller', 0, 0, '2018-10-25 07:55:59', NULL, NULL),
+(22, 'Sous Catégorie de Produits', 'fa fa-glass', 'sous_categorie', 'sous_categorie', 'AdminSousCategorieController', 0, 0, '2018-10-25 07:56:39', NULL, '2018-10-26 12:10:07'),
+(23, 'Sous catégorie de produits', 'fa fa-glass', 'sous_categorie23', 'sous_categorie', 'AdminSousCategorie23Controller', 0, 0, '2018-10-26 12:10:32', NULL, NULL),
+(24, 'Activité commerciale', 'fa fa-star', 'activite_commerciale', 'activite_commerciale', 'AdminActiviteCommerciale1Controller', 0, 0, '2018-10-26 12:37:50', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -293,7 +411,9 @@ CREATE TABLE `cms_privileges` (
 --
 
 INSERT INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `created_at`, `updated_at`) VALUES
-(1, 'Super Administrator', 1, 'skin-red', '2018-10-24 15:00:33', NULL);
+(1, 'Super Administrator', 1, 'skin-red', '2018-10-24 15:00:33', NULL),
+(2, 'Admin', 0, 'skin-blue', NULL, NULL),
+(3, 'utilisateurs', 0, 'skin-blue', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -329,7 +449,35 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (8, 1, 1, 1, 1, 1, 1, 8, '2018-10-24 15:00:33', NULL),
 (9, 1, 1, 1, 1, 1, 1, 9, '2018-10-24 15:00:33', NULL),
 (10, 1, 1, 1, 1, 1, 1, 10, '2018-10-24 15:00:33', NULL),
-(11, 1, 0, 1, 0, 1, 1, 11, '2018-10-24 15:00:33', NULL);
+(11, 1, 0, 1, 0, 1, 1, 11, '2018-10-24 15:00:33', NULL),
+(12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
+(13, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
+(14, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
+(15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
+(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
+(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
+(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
+(19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL),
+(20, 1, 1, 1, 1, 1, 1, 20, NULL, NULL),
+(21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL),
+(22, 1, 1, 1, 1, 1, 1, 22, NULL, NULL),
+(23, 1, 1, 1, 1, 1, 1, 23, NULL, NULL),
+(24, 1, 1, 1, 1, 1, 2, 13, NULL, NULL),
+(25, 1, 0, 0, 0, 0, 2, 14, NULL, NULL),
+(26, 1, 1, 1, 1, 1, 2, 18, NULL, NULL),
+(27, 1, 0, 0, 0, 0, 2, 19, NULL, NULL),
+(28, 1, 0, 0, 0, 0, 2, 20, NULL, NULL),
+(29, 1, 0, 0, 0, 0, 2, 21, NULL, NULL),
+(30, 1, 1, 1, 1, 1, 2, 23, NULL, NULL),
+(31, 1, 1, 1, 1, 1, 2, 4, NULL, NULL),
+(32, 1, 0, 0, 0, 0, 3, 13, NULL, NULL),
+(33, 1, 0, 0, 0, 0, 3, 14, NULL, NULL),
+(34, 1, 1, 1, 1, 1, 3, 15, NULL, NULL),
+(35, 1, 1, 1, 1, 1, 3, 17, NULL, NULL),
+(36, 1, 0, 0, 0, 0, 3, 18, NULL, NULL),
+(37, 1, 0, 0, 0, 0, 3, 20, NULL, NULL),
+(38, 1, 0, 0, 0, 0, 3, 23, NULL, NULL),
+(39, 1, 1, 1, 1, 1, 1, 24, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -428,7 +576,9 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$iSPD01Hnme6aaq1dWS49N.bOLbi0YA3OuvcA.NGqHMeo0W46bypMe', 1, '2018-10-24 15:00:33', NULL, 'Active');
+(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$iSPD01Hnme6aaq1dWS49N.bOLbi0YA3OuvcA.NGqHMeo0W46bypMe', 1, '2018-10-24 15:00:33', NULL, 'Active'),
+(4, 'admin', 'uploads/1/2018-10/simplon.png', 'admin@cd32.com', '$2y$10$uShpuKCdu2bWAY8dY/H3Vueu7hIBotvHn0Vp8tqooRB32yUPSvYeW', 2, '2018-10-26 12:35:35', NULL, NULL),
+(5, 'user', 'uploads/1/2018-10/simplon.png', 'user@cd32.com', '$2y$10$vLTxT4KXSqgi35v/EeM2TO08iE9kQpp5btmR1KNuz/CTUvS8DItj.', 3, '2018-10-26 12:36:08', '2018-10-26 12:53:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -532,7 +682,7 @@ CREATE TABLE `preferer` (
 --
 
 CREATE TABLE `producteur` (
-  `id_producteur` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `nom_entreprise_producteur` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lieu_dit_producteur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `numero_producteur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -553,7 +703,7 @@ CREATE TABLE `producteur` (
 -- Contenu de la table `producteur`
 --
 
-INSERT INTO `producteur` (`id_producteur`, `nom_entreprise_producteur`, `lieu_dit_producteur`, `numero_producteur`, `voie_producteur`, `code_postal_producteur`, `commune_producteur`, `nom_producteur`, `telephone_un_producteur`, `telephone_deux_producteur`, `coordonneeDD_producteur`, `mail_producteur`, `site_internet_producteur`, `created_at`, `updated_at`) VALUES
+INSERT INTO `producteur` (`id`, `nom_entreprise_producteur`, `lieu_dit_producteur`, `numero_producteur`, `voie_producteur`, `code_postal_producteur`, `commune_producteur`, `nom_producteur`, `telephone_un_producteur`, `telephone_deux_producteur`, `coordonneeDD_producteur`, `mail_producteur`, `site_internet_producteur`, `created_at`, `updated_at`) VALUES
 (1, 'ABBAYE SAINTE MARIE DE BOULAUR', NULL, NULL, NULL, '32450', 'BOULAUR', NULL, '05 62 65 40 07', NULL, '43.540644, 0.773294', 'travaux.abbaye@boulaur.org', NULL, NULL, NULL),
 (2, 'ALBERT STÉPHANE', 'EN HOURMENT', NULL, NULL, '32120', 'LABRIHE', 'ALBERT STÉPHANE', '06 18 39 48 45', NULL, '43.770512, 0.87538', 'salbert32@laposte.net', NULL, NULL, NULL),
 (3, 'AQUALANDE', NULL, '505', 'RUE DE LA GRANDE LANDE', '40120', 'ROQUEFORT', NULL, '05 58 05 61 00', NULL, '44.038138, -0.315465', 'aqualande@aqualande.com', NULL, NULL, NULL),
@@ -784,7 +934,7 @@ INSERT INTO `producteur` (`id_producteur`, `nom_entreprise_producteur`, `lieu_di
 --
 
 CREATE TABLE `produire` (
-  `id_produire` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `id_produit` int(11) NOT NULL,
   `id_producteur` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -815,11 +965,19 @@ CREATE TABLE `produit` (
 --
 
 CREATE TABLE `siqo` (
-  `id_siqo` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `nom_siqo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `siqo`
+--
+
+INSERT INTO `siqo` (`id`, `nom_siqo`, `created_at`, `updated_at`) VALUES
+(1, 'Label Rouge', '2018-10-25 09:47:04', NULL),
+(2, 'AB', '2018-10-25 09:47:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -828,21 +986,58 @@ CREATE TABLE `siqo` (
 --
 
 CREATE TABLE `sous_categorie` (
-  `id_sous_categorie` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `nom_sous_categorie` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_categorie` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `sous_categorie`
+--
+
+INSERT INTO `sous_categorie` (`id`, `nom_sous_categorie`, `id_categorie`, `created_at`, `updated_at`) VALUES
+(1, 'Bovin', 1, '2018-10-26 06:29:15', NULL),
+(2, 'Ovin', 1, '2018-10-26 06:29:25', NULL),
+(3, 'Porcin', 1, '2018-10-26 06:29:37', NULL),
+(4, 'Caprin', 1, '2018-10-26 06:29:50', NULL),
+(5, 'Volaille et Autre', 1, '2018-10-26 06:30:51', NULL),
+(6, 'Pâtisserie', 2, '2018-10-26 06:31:10', NULL),
+(7, 'Viennoiserie', 2, '2018-10-26 06:31:23', NULL),
+(8, 'Pains', 2, '2018-10-26 06:31:32', NULL),
+(9, 'Primeurs', 4, '2018-10-26 06:31:59', NULL),
+(10, 'Légumes Transformés', 4, '2018-10-26 06:32:38', NULL),
+(11, 'Primeurs', 5, '2018-10-26 06:36:05', NULL),
+(12, 'Fruits Transformés', 5, '2018-10-26 06:36:32', NULL),
+(13, 'Yahourt', 6, '2018-10-26 06:37:08', NULL),
+(14, 'Oeufs', 6, '2018-10-26 06:37:28', NULL),
+(15, 'Lait', 6, '2018-10-26 06:37:52', NULL),
+(16, 'Crèmerie', 6, '2018-10-26 06:38:34', NULL),
+(17, 'Fromages', 6, '2018-10-26 06:39:20', NULL),
+(18, 'Légumes secs', 7, '2018-10-26 06:39:48', NULL),
+(19, 'Farines', 7, '2018-10-26 06:40:06', NULL),
+(20, 'Produits Transformés', 7, '2018-10-26 06:40:33', NULL),
+(21, 'Miels', 8, '2018-10-26 06:41:00', NULL),
+(22, 'Huiles', 8, '2018-10-26 06:41:21', NULL),
+(23, 'Plantes Aromatiques', 8, '2018-10-26 06:41:39', NULL),
+(24, 'Vinaigre', 8, '2018-10-26 06:41:54', NULL);
 
 --
 -- Index pour les tables exportées
 --
 
 --
+-- Index pour la table `activite_commerciale`
+--
+ALTER TABLE `activite_commerciale`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  ADD PRIMARY KEY (`id_categorie`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `chef`
@@ -974,7 +1169,7 @@ ALTER TABLE `preferer`
 -- Index pour la table `producteur`
 --
 ALTER TABLE `producteur`
-  ADD PRIMARY KEY (`id_producteur`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `produit`
@@ -986,23 +1181,29 @@ ALTER TABLE `produit`
 -- Index pour la table `siqo`
 --
 ALTER TABLE `siqo`
-  ADD PRIMARY KEY (`id_siqo`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `sous_categorie`
 --
 ALTER TABLE `sous_categorie`
-  ADD PRIMARY KEY (`id_sous_categorie`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sous_categorie_id_categorie_foreign` (`id_categorie`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
 --
+-- AUTO_INCREMENT pour la table `activite_commerciale`
+--
+ALTER TABLE `activite_commerciale`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id_categorie` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `chef`
 --
@@ -1037,22 +1238,22 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT pour la table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT pour la table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT pour la table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT pour la table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT pour la table `cms_notifications`
 --
@@ -1062,12 +1263,12 @@ ALTER TABLE `cms_notifications`
 -- AUTO_INCREMENT pour la table `cms_privileges`
 --
 ALTER TABLE `cms_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT pour la table `cms_settings`
 --
@@ -1087,7 +1288,7 @@ ALTER TABLE `cms_statistic_components`
 -- AUTO_INCREMENT pour la table `cms_users`
 --
 ALTER TABLE `cms_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `commentaire`
 --
@@ -1112,7 +1313,7 @@ ALTER TABLE `preferer`
 -- AUTO_INCREMENT pour la table `producteur`
 --
 ALTER TABLE `producteur`
-  MODIFY `id_producteur` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
 --
 -- AUTO_INCREMENT pour la table `produit`
 --
@@ -1122,12 +1323,12 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT pour la table `siqo`
 --
 ALTER TABLE `siqo`
-  MODIFY `id_siqo` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `sous_categorie`
 --
 ALTER TABLE `sous_categorie`
-  MODIFY `id_sous_categorie` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
